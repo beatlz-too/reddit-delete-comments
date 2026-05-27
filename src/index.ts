@@ -1,8 +1,10 @@
 import { deleteComments } from "./services/deleteComments";
 import { getDeleteButtons } from "./utils/getDeleteButtons";
 
+declare const MIN_KARMA: number;
+
 (async () => {
-    const btns = getDeleteButtons()
+    const btns = getDeleteButtons({ minKarma: MIN_KARMA })
     
     if (btns.length) await deleteComments({ btns })
 
