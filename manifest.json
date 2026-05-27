@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Comment Delete",
+  "version": "1.0.0",
+  "description": "Delete Reddit comments",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://old.reddit.com/user/*/comments/*"],
+      "js": ["dist/index.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
+}

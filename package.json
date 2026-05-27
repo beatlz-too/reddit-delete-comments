@@ -1,0 +1,13 @@
+{
+  "name": "reddit-comment-delete",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target browser && bun scripts/copy-manifest.ts",
+    "watch": "bun build src/index.ts --outdir dist --target browser --watch"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.320",
+    "typescript": "^5.8.3"
+  }
+}
