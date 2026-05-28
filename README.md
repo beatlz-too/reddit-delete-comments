@@ -52,7 +52,7 @@ The extension is not published to any store — it must be loaded manually as an
 After any code change, run `bun run build` again and click the **refresh icon** on the extension card.
 
 ## Usage
-
+0. `bun run build --min-karma=5`
 1. Sign in to Reddit
 2. Navigate to your comments page:
    ```
