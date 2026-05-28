@@ -1,4 +1,6 @@
 export const deleteComments = ({ btns }: { btns: HTMLAnchorElement[] }) => {
+    if (!btns.length) return
+
     btns.forEach(btn => btn.click())
 
     const confirmDeleteBtns = document.querySelectorAll("span.option.error.active > a.yes")
