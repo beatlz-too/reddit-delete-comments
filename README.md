@@ -1,6 +1,6 @@
 # Reddit Comment Delete
 
-A local Chrome extension that automatically deletes your comments on old Reddit.
+A local Chromium extension that automatically deletes your comments on old Reddit.
 
 ## Build
 
