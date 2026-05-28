@@ -1,6 +1,6 @@
 # Reddit Comment Delete
 
-A local Chromium extension that automatically deletes your comments on old Reddit.
+A local Chromium extension to auto-delete your comments on Reddit.
 
 ## Build
 
@@ -18,6 +18,8 @@ bun run build
 ```bash
 bun run build --min-karma=5
 ```
+
+_Note - If you want to delete all comments, just put a very high number like `--min-karma=5000000`. Hacky but effective_
 
 ## Load the extension
 
