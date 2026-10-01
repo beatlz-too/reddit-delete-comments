@@ -57,6 +57,8 @@ The extension is not published to any store — it must be loaded manually as an
 
 _Note - Temporary add-ons are removed when Firefox restarts, so you'll need to load it again each session. Release Firefox only installs signed extensions permanently; for a permanent unsigned install use Firefox Developer Edition or Nightly with `xpinstall.signatures.required` set to `false` in `about:config`._
 
+_Note - Firefox doesn't grant newly added site permissions when a temporary add-on is reloaded. If an update adds a new site (e.g. `www.reddit.com`), **Remove** the add-on in `about:debugging` and load `dist/manifest.json` again._
+
 After any code change, run `bun run build` again and click the **refresh icon** on the extension card (Chromium) or **Reload** in `about:debugging` (Firefox).
 
 ## Usage
@@ -67,6 +69,10 @@ After any code change, run `bun run build` again and click the **refresh icon** 
    https://old.reddit.com/user/<your-username>/comments/
    ```
 3. The extension runs automatically — it will delete qualifying comments and advance through pages until done
+
+### Comment box & Reply buttons blocked
+
+While the extension is enabled, the "Join the conversation" comment composer and every comment **Reply** button on `www.reddit.com` are never rendered. Disable the extension to get them back.
 
 ### IMPORTANT ‼️
 

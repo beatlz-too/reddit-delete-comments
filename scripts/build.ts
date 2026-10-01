@@ -5,7 +5,7 @@ const minKarmaArg = process.argv.find(arg => arg.startsWith("--min-karma="))
 const minKarma = minKarmaArg ? minKarmaArg.split("=")[1] : "10"
 
 execSync(
-    `bun build src/index.ts --outdir dist --target browser --define MIN_KARMA=${minKarma}`,
+    `bun build src/index.ts src/blockCommentComposer.ts --outdir dist --target browser --define MIN_KARMA=${minKarma}`,
     { stdio: "inherit" }
 )
 

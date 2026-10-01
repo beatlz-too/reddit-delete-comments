@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "bun scripts/build.ts",
-    "watch": "bun build src/index.ts --outdir dist --target browser --watch"
+    "watch": "bun build src/index.ts src/blockCommentComposer.ts --outdir dist --target browser --watch"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.320",
