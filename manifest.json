@@ -3,13 +3,33 @@
   "name": "Reddit Comment Delete",
   "version": "1.0.0",
   "description": "Delete Reddit comments",
-  "permissions": ["activeTab"],
+  "permissions": [
+    "activeTab"
+  ],
   "content_scripts": [
     {
-      "matches": ["https://old.reddit.com/user/*/comments/*"],
-      "js": ["dist/index.js"],
+      "matches": [
+        "https://old.reddit.com/user/*/comments/*"
+      ],
+      "js": [
+        "dist/index.js"
+      ],
       "run_at": "document_idle",
       "world": "MAIN"
     }
-  ]
+  ],
+  "host_permissions": [
+    "https://old.reddit.com/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "reddit-comment-delete@local",
+      "strict_min_version": "128.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
 }

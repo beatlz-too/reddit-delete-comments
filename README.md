@@ -1,6 +1,6 @@
 # Reddit Comment Delete
 
-A local Chromium extension to auto-delete your comments on Reddit.
+A local Chromium / Firefox extension to auto-delete your comments on Reddit.
 
 ## Build
 
@@ -49,7 +49,15 @@ The extension is not published to any store — it must be loaded manually as an
 3. Click **Load unpacked**
 4. Select the `dist/` folder
 
-After any code change, run `bun run build` again and click the **refresh icon** on the extension card.
+### Firefox (128+)
+1. Go to `about:debugging#/runtime/this-firefox`
+2. Click **Load Temporary Add-on…**
+3. Select the `manifest.json` file inside the `dist/` folder
+4. If the script doesn't run, open `about:addons` → **Reddit Comment Delete** → **Permissions** and make sure access to `old.reddit.com` is allowed
+
+_Note - Temporary add-ons are removed when Firefox restarts, so you'll need to load it again each session. Release Firefox only installs signed extensions permanently; for a permanent unsigned install use Firefox Developer Edition or Nightly with `xpinstall.signatures.required` set to `false` in `about:config`._
+
+After any code change, run `bun run build` again and click the **refresh icon** on the extension card (Chromium) or **Reload** in `about:debugging` (Firefox).
 
 ## Usage
 0. `bun run build --min-karma=5`
