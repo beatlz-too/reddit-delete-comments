@@ -16,10 +16,24 @@
       ],
       "run_at": "document_idle",
       "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://www.reddit.com/*",
+        "https://sh.reddit.com/*"
+      ],
+      "js": [
+        "dist/blockCommentComposer.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
     }
   ],
   "host_permissions": [
-    "https://old.reddit.com/*"
+    "https://old.reddit.com/*",
+    "https://www.reddit.com/*",
+    "https://sh.reddit.com/*"
   ],
   "browser_specific_settings": {
     "gecko": {
